@@ -27,6 +27,18 @@ module.exports = {
                     'css-loader',
                     'sass-loader',
                 ],
+            },
+            {
+                test: /\.css$/,
+                // Note!! order is from last to first
+                use: [
+                    'style-loader', // would be the last loader
+                    {
+                        loader: 'css-loader',
+                        options: { importLoaders: 1 }
+                    },
+                    'postcss-loader',
+                ],
             }
         ]
     }

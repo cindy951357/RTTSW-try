@@ -5,11 +5,13 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Contact from './components/Contact.jsx';
 import About from './components/About.jsx';
 
+import './styles.css';
+
 
 const App = () => {
     return (
         <>
-            <div id='app-component'>
+            <div id='app-component' className='bg-green-400'>
                 <h1>Welcome to RTTSW-try</h1>
             </div>
             <Router>
