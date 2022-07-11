@@ -1,0 +1,8 @@
+Step 1.
+npx sb init --builder webpack5
+然後可能要照著terminal的指示去接受安裝sb
+
+Step 2.
+yarn storybook
+或是
+npm run storybook

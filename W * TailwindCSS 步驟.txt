@@ -1,0 +1,10 @@
+https://youtu.be/dRi7Y4GHylU
+TAILWIND CSS setup from scratch - With Webpack
+@Weibenfalk
+
+Step 1.
+add src/styles.css
+add postcss.config.js
+
+Step 2.
+npm i -D tailwindcss
