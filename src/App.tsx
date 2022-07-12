@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
+import { useTranslation } from 'react-i18next';
 
 import Contact from './components/Contact.jsx';
 import About from './components/About.jsx';
@@ -9,10 +10,11 @@ import './styles.css';
 
 
 const App = () => {
+    const { t } = useTranslation();
     return (
-        <>
+        <div>
             <div id='app-component' className='bg-green-400'>
-                <h1>Welcome to RTTSW-try</h1>
+                <h1>{t('title')}</h1>
             </div>
             <Router>
                 <div className="wrapper">
@@ -23,13 +25,13 @@ const App = () => {
                     </div>
 
                     <Routes>
-                        <Route exact path="/" component={About} />
-                        <Route path="/about" component={About} />
-                        <Route path="/contact" component={Contact} />
+                        <Route path="/" element={About} />
+                        <Route path="/about" element={About} />
+                        <Route path="/contact" element={Contact} />
                     </Routes>
                 </div>
             </Router>
-        </>
+        </div>
     )
 }
 
